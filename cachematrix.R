@@ -4,6 +4,7 @@
 ## Write a short comment describing this function
 
 # Assuem that all of our input matrix are nonsingular
+# Create a cache of inverse matrix
 makeCacheMatrix <- function(x = matrix()) {
     inv_x <- NULL
     set <- function(y) {
@@ -20,7 +21,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
-
+# Check if there is a inverse matrix has been created,
+# the following function will return the value from cache
+# Or, it would calculate and cache it!
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         inv_x <- x$get_inverse()
